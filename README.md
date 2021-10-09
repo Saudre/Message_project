@@ -13,3 +13,7 @@ The project's primary goal is to write a program in JavaScript that generates a 
 * Bash
 * Git
 * GiHub
+
+## Project Status
+
+In progress
