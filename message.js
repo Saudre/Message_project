@@ -23,15 +23,13 @@ const message = {
         Economy: [],
         Literature: []
     },
-    areasKnolege: ['Science', 'History', 'Economy', 'Literature'],
+    areasKnowlege: ['Science', 'History', 'Economy', 'Literature'],
     getMessage () {
         const option = Math.floor(Math.random()*this.areasKnolege.length);
         const area = this.areasKnolege[option];
         const randomNumber = Math.floor(Math.random()*this.messages[area].length);
         const messageObject = this.messages[area][randomNumber];
-        return `
-        ${area.toUpperCase()} 
-        ${messageObject.author} ones said that '${messageObject.quote}'`
+        return `${area.toUpperCase()}: ${messageObject.author} ones said that '${messageObject.quote}'`
     } 
 }
 
