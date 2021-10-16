@@ -48,7 +48,22 @@ const message = {
             quote: "No gain is so certain as that which proceeds for the economical use of what you already have.",
             author: "Latin Proverb"
         }],
-        Literature: []
+        Literature: [{
+            quote: "The goal isn’t to live forever, the goal is to create something that will.",
+            author: "Chuck Palahniuk"
+        },{
+            quote: "The only limits for tomorrow are the doubts we have today.",
+            author: "Pittacus Lore"
+        },{
+            quote: "If I got rid of my demons, I’d lose my angels.",
+            author: "Tennessee Williams"
+        },{
+            quote: "Above all, don’t lie to yourself.",
+            author: "Fyodor Dostoyevsky"
+        },{
+            quote: "It is never too late to be wise.",
+            author: "Daniel Defoe"
+        }]
     },
     areasKnowlege: ['Science', 'History', 'Economy', 'Literature'],
     getMessage () {
@@ -56,8 +71,8 @@ const message = {
         const area = this.areasKnowlege[option];
         const randomNumber = Math.floor(Math.random()*this.messages[area].length);
         const messageObject = this.messages[area][randomNumber];
-        return `${area.toUpperCase()}: ${messageObject.author} ones said that '${messageObject.quote}'`
+        return console.log(`%c${area.toUpperCase()}: ${messageObject.author} ones said that '${messageObject.quote}'`, `color: #fff; background: #000; padding: 10px;`);
     } 
 }
 
-console.log(message.getMessage())
+message.getMessage()
