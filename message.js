@@ -71,7 +71,7 @@ const message = {
         const area = this.areasKnowlege[option];
         const randomNumber = Math.floor(Math.random()*this.messages[area].length);
         const messageObject = this.messages[area][randomNumber];
-        return console.log(`%c${area.toUpperCase()}: ${messageObject.author} ones said that '${messageObject.quote}'`, `color: #fff; background: #000; padding: 10px;`);
+        return console.log(`${area.toUpperCase()}: ${messageObject.author} ones said that '${messageObject.quote}'`);
     } 
 }
 
